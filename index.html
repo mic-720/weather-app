@@ -10,35 +10,36 @@
     <div class="container">
         <div class="weather-app">
             <div class="input-btn">
-                <input type="text" value="New Delhi">
+                <input type="text" placeholder="Enter the City Name">
                 <div class="search-img">
                     <img src="./images copy/search.png" alt="" id="search-img"> 
                 </div>
             </div>
             <div class="weather-img">
-                <img src="./images copy/clear.png" alt="">
+                <img src="./images copy/clear.png" id="weather-pic" alt="image not found">
             </div>
             <div class="temp-city">
-                <p class="temp"><span id="temp-value">7</span>&deg;<span>C</span></p>
-                <p class="city">New Delhi</p>
+                <p class="temp"><span id="temp-value">00</span>&deg;<span>C</span></p>
+                <p class="city">City Name</p>
             </div>
             <div class="details">
                 <div class="det-1 inner">
-                    <img src="./images copy/humidity.png" alt="">
+                    <img src="./images copy/humidity.png" alt="" >
                     <div class="details-p">
-                        <p id="humidity">48%</p>
+                        <p id="humidity"><span id="humidity-value">00</span>%</p>
                         <p id="humidity-text">Humidity</p>
                     </div>
                 </div>
                 <div class="det-2 inner">
                     <img src="./images copy/wind.png" alt="">
                     <div class="details-p">
-                        <p id="windspeed">10.29 km/h</p>
+                        <p id="windspeed"><span id="windspeed_value">00.0</span> km/h</p>
                         <p id="windspeed-text">Wind Speed</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="index.js"></script>
 </body>
 </html>

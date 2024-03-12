@@ -28,17 +28,22 @@
 }
 .input-btn input{
     padding: 15px ;
+    padding-left: 1.5rem;
     background-color: lightgrey;
     border-radius: 30px;
     width: 80%;
     border: none;
     outline: none;
+    font-size: 1.2rem;
+}
+.input-btn input::placeholder{
     font-size: 1rem;
 }
 .search-img{
     background-color: lightgrey;
     padding: 1rem 1.2rem;
     border-radius: 50%;
+    cursor: pointer;
 }
 .search-img img{
     border: none;
