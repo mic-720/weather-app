@@ -4,7 +4,7 @@ let temp = document.querySelector("#temp-value");
 let cityName = document.querySelector(".city");
 let humidity = document.querySelector("#humidity-value");
 let windspeed = document.querySelector("#windspeed_value");
-let weather_pic = document.querySelector("#weather-pic");
+let icon = document.querySelector("#icon");
 let cityInput = "";
 
 const getInfo = async () => {
@@ -17,29 +17,14 @@ const getInfo = async () => {
     humidity.innerText = data.current["humidity"];
     windspeed.innerText = data.current["wind_kph"];
     let condition = data.current["condition"]["text"];
-    let cond = (condition.toLowerCase()).trim(); 
-    changePic(cond);
+    console.log(data);
+    const iconId = data.current.condition.icon.substring(
+        "//cdn.weatherapi.com/weather/64x64/".length
+    );
+    console.log(iconId);
+    icon.src = "./64x64/" + iconId;
 }
-const changePic = (condition) => {
-    if(condition.includes("rain")){
-        condition="rain";
-    }
-    else if(condition.includes("cloud")){
-        condition="clouds";
-    }
-    else if(condition.includes("snow")){
-        condition="snow";
-    }
-    else if(condition.includes("mist")){
-        condition="mist";
-    }
-    else if(condition.includes("light") && condition.includes("rain")){
-        condition="drizzle";
-    }
-    let newSrc = `./images copy/${condition}.png`;
-    console.log(newSrc);
-    weather_pic.setAttribute("src",newSrc)
-} 
+
 const func = () => {
     cityInput = input.value;
     if(cityInput===""){
